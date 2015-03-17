@@ -1,0 +1,21 @@
+{
+  "name": "todo-list-expressjs",
+  "version": "0.0.0",
+  "authors": [
+    "Gabriel Valle <contato@gabrielvalle.com.br>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets",
+    "test",
+    "tests",
+    "assets/vendor"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}

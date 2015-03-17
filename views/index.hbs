@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="all.css" type="text/css">
+  </head>
+
+  <body>
+    <p class="session-id">
+      <strong>Session ID:</strong>
+      {{session.user_id}}
+    </p>
+
+    <p class="loading">
+      Loading
+    </p>
+
+    <div class="page hidden">
+      <p class="field">
+        <input type="text"
+          autofocus
+          class="task-input"
+          placeholder="What's next?"
+          maxlength="55"
+        >
+      </p>
+
+      <ul class="tasks">
+        <li class="task pending" data-id="2">
+          <input type="checkbox">
+          <strong>Some pending task</strong>
+          <input type="button" class="remove button" value="Remove" title="Remove this task">
+        </li>
+
+        <li class="task pending" data-id="2">
+          <input type="checkbox">
+
+          <input class="editable" value="Inline editing">
+          <strong class="hidden">Inline editing</strong>
+
+          <input type="button" class="remove button" value="Remove" title="Remove this task">
+        </li>
+
+        <li class="task done" data-id="1">
+          <input type="checkbox">
+          <strong>Some complete task</strong>
+          <input type="button" class="remove button" value="Remove" title="Remove this task">
+        </li>
+      </ul>
+
+      <p class="summary">
+        0 tasks, 0 pending, 0 complete
+      </p>
+    </div>
+
+    <script src="all.js"></script>
+  </body>
+</html>
