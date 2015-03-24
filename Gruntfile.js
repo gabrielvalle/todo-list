@@ -6,13 +6,13 @@ module.exports = function(grunt) {
 
   // Set JavaScripts that will be compiled.
   var jsFiles = [
-    'assets/javascripts/**/*.js'
+    'assets/javascripts/**/*.js' 
   ];
 
   // Compress the CSS.
   config.set('cssmin.dist', {
       src: 'assets/stylesheets/todo.css'
-    , dest: 'public/all.css'
+    , dest: 'public/stylesheets/todo.css'
   });
 
   // Compress images.
@@ -33,18 +33,18 @@ module.exports = function(grunt) {
         }
       }
     , src: jsFiles
-    , dest: 'public/all.js'
+    , dest: 'public/javascripts/todo.js'
   });
 
   // Concatenate JavaScript
   config.set('concat.dev', {
       src: jsFiles
-    , dest: 'public/all.js'
+    , dest: 'public/javascripts/todo.js'
   });
 
   // Watch for updates.
   config.set('watch.js', {
-      files: ['assets/javascripts/**/*.js', 'assets/vendor/**/*']
+      files: ['assets/javascripts/**/*.js', 'assets/components/**/*']
     , tasks: ['concat']
     , options: {
         livereload: true,
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
   });
 
   config.set('watch.css', {
-      files: ['assets/stylesheets/**/*.css', 'assets/vendor/**/*']
+      files: ['assets/stylesheets/**/*.css', 'assets/components/**/*']
     , tasks: ['cssmin']
     , options: {
         livereload: true,
@@ -68,7 +68,7 @@ module.exports = function(grunt) {
   config.set('bower', {
     install: {
       options: {
-        targetDir: './public/vendor',
+        targetDir: './public/assets/components',
         install: true,
         verbose: false,
         cleanTargetDir: false,
