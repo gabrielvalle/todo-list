@@ -69,13 +69,13 @@ module.exports = function(grunt) {
   config.set('bower', {
     install: {
       options: {
-        targetDir: './public/assets/components',
+        targetDir: './assets/components',
         install: true,
         verbose: false,
         cleanTargetDir: false,
         cleanBowerDir: false,
         bowerOptions: {},
-        layout: 'byType',
+        layout: 'byComponent'
       }
 
     }
