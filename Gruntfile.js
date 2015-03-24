@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 
   // Set JavaScripts that will be compiled.
   var jsFiles = [
-    'assets/javascripts/**/*.js' 
+      'vendor/assets/jquery/dist/jquery.js'
+    , 'assets/javascripts/**/*.js' 
   ];
 
   // Compress the CSS.
